@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 2020_05_28_002918) do
     t.string "name"
     t.integer "target_amount"
     t.text "description"
+    t.integer "organization_id"
     t.date "start_date"
     t.date "end_date"
     t.datetime "created_at", precision: 6, null: false

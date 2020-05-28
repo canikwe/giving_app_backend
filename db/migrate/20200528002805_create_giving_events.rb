@@ -4,6 +4,7 @@ class CreateGivingEvents < ActiveRecord::Migration[6.0]
       t.string :name
       t.integer :target_amount
       t.text :description
+      t.integer :organization_id
       t.date :start_date
       t.date :end_date
 
