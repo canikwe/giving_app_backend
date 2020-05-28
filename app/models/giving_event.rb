@@ -1,0 +1,2 @@
+class GivingEvent < ApplicationRecord
+end
