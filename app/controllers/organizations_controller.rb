@@ -22,6 +22,6 @@ class OrganizationsController < ApplicationController
   end
 
   def org_serializer
-    {except: [:created_at, :updated_at], include: {giving_events: { except: [:created_at, :updated_at] } }}
+    {except: [:created_at, :updated_at]}
   end
 end

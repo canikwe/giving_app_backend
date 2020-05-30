@@ -1,5 +1,10 @@
 class GivingEventsController < ApplicationController
 
+  def index
+    giving_events = GivingEvent.all
+    render json: giving_events.to_json(giving_event_serializer)
+  end
+
   def create
     giving_event = GivingEvent.new(giving_event_params)
     if giving_event.valid?
