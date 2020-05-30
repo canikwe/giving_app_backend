@@ -10,10 +10,9 @@ class DonationsController < ApplicationController
 
     if donation.valid?
       donation.save
-
-      render json: donation.to_json(donation_serializer)
+      render json: donation.to_json(donation_serializer), status: :created
     else
-      render json: {message: 'Error adding donation'}
+      render json: {message: donation.errors.full_messages}, status: :not_acceptable
     end
   end
 
