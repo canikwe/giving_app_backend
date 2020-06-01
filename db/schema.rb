@@ -45,8 +45,6 @@ ActiveRecord::Schema.define(version: 2020_05_28_002918) do
 
   create_table "users", force: :cascade do |t|
     t.string "name"
-    t.string "affiliation"
-    t.string "graduation_year"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
